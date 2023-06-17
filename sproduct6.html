@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/c144eee9ab.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <title>Library Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="loader">
+    <main>
+        <div class="cell">
+            <div class="pl pl-flip"></div>
+            <div class="pl-name">Loading</div>
+            </div>
+    </main>
+</div>
+<body class="shoppp">
+    <section id="header">
+        <a href="#"><img src="img/logo.jpeg" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="" href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html" >Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-beat"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="img/products/product-11.png" width="100%" id="MainImg" alt="">
+        </div>
+
+        <div class="single-pro-details">
+            <h4>The Girl in the red Lipstick</h4>
+            <h3>Ajay K Pandey</h3>
+            <h2>Rs. 199</h2>
+            <input type="number" value="1">
+            <button class="normal">Add to cart</button>
+            <h4>About the author</h4>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iste dolor nulla facilis itaque quis reprehenderit nesciunt molestias blanditiis! Ea modi a vero cumque sit qui reiciendis suscipit eligendi, hic sed perspiciatis, deleniti explicabo officia, harum autem. Perspiciatis odio laboriosam molestias corporis aliquid ipsum officia modi vero, praesentium a deserunt?</span>
+        </div>
+    </section>
+
+
+    <section id="product1" class="section-p1">
+        <h2>Similar Books</h2>
+        <h4>People also buy</h4>
+        <div class="pro-container">
+
+            <div class="pro">
+                <img src="img/products/product-9.png" alt="">
+                <div class="des">
+                    <span>Mansi Kashyap</span>
+                    <h5>Love By Chance</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs. 278</h4>
+                </div>
+                <a href="" title="cart"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="img/products/product-10.png" alt="">
+                <div class="des">
+                    <span>Novoneel Chakraborty</span>
+                    <h5>That kiss in the Rain</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs. 219</h4>
+                </div>
+                <a href="" title="cart"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="img/products/product-11.png" alt="">
+                <div class="des">
+                    <span>Rachna Bisht Rawat</span>
+                    <h5>The behind the Uniform</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs. 399</h4>
+                </div>
+                <a href="" title="cart"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="img/products/product-8.png" alt="">
+                <div class="des">
+                    <span>Rahul Banerjee</span>
+                    <h5>Revenge of Evil Tantric</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs. 319</h4>
+                </div>
+                <a href="" title="cart"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+            </div>
+
+        </div>
+    </section>
+    
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>SignUp for NewsLetter</h4>
+            <p>Get email updates about our latest Stocks and <span>Special Offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Email" name="" id="">
+            <button class="normal">SignUp</button>
+        </div>
+    </section>
+
+    <script>
+     $(window).on('load', function(){
+        $(".loader").fadeOut(2000);
+        $(".shoppp").fadeIn(1000);
+    })
+
+    </script>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/c144eee9ab.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <title>Library Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="loader">
+    <main>
+        <div class="cell">
+            <div class="pl pl-flip"></div>
+            <div class="pl-name">Loading</div>
+            </div>
+    </main>
+</div>
+<body class="homee">
+    <section id="header">
+        <a href="#"><img src="img/logo.jpeg" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a class="active" href="cart.html" ><i class="fa-solid fa-cart-shopping fa-beat"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header">     
+    
+        <h2>The All-in-One Book Store</h2> 
+        <p>Save upto 70% with bank offers </p>
+        <button type="button" class="normal" onclick="window.location.href='shop.html'"> Shop Now </button>
+    
+        </section>
+
+        <section id="cart" class="section-p1">
+            <table width="100%"> 
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href=""><i class="fa-sharp fa-solid fa-circle-xmark "></i></a></td>
+                        <td><img src="img/products/product-3.png" alt=""></td>
+                        <td>The Man behind the uniform</td>
+                        <td>Price</td>
+                        <td><input type="number" value="1" name="" id=""></td>
+                        <td>Price</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href=""><i class="fa-sharp fa-solid fa-circle-xmark "></i></a></td>
+                        <td><img src="img/products/product-6.png" alt=""></td>
+                        <td>When I come Home Again</td>
+                        <td>Price</td>
+                        <td><input type="number" value="1" name="" id=""></td>
+                        <td>Price</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href=""><i class="fa-sharp fa-solid fa-circle-xmark "></i></a></td>
+                        <td><img src="img/products/product-9.png" alt=""></td>
+                        <td>The Happy Prince and other tales</td>
+                        <td>Price</td>
+                        <td><input type="number" value="1" name="" id=""></td>
+                        <td>Price</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- <section id="cart-add" class="section-p1">
+            <div id="coupon">
+                <h3>Apply Coupon</h3>
+                <div>
+                    <input type="text" placeholder="Enter the Coupon" id="">
+                    <button class="normal">Apply</button>
+                </div>
+            </div>
+            <div id="subtotal">
+                <h3>Cart Total</h3>
+            </div>
+        </section> -->
+
+    <script>
+        $(window).on('load', function(){
+           $(".loader").fadeOut(2000);
+           $(".homee").fadeIn(1000);
+       })
+   
+       </script>
+
+
+<script src="script.js"></script>
+</body>
+</html>

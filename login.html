@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+    <div id ="loader" class="loader">
+        <main>
+            <div class="cell">
+                <div class="pl pl-flip"></div>
+                <div class="pl-name">Loading</div>
+                </div>
+        </main>
+    </div>
+
+<body class="login-body">
+ <form action="" method="post" onsubmit="login(event)">
+   <div class="login">
+    <h2>Login</h2>
+    <form>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="input-group login-button">
+        <input type="submit" value="Login/Register">
+      </div>
+    </form>
+  </div>
+
+  <script>
+
+     $(window).on('load', function(){
+        $(".loader").fadeOut(2000);
+        $(".login").fadeIn(1000);
+
+    })
+
+    function login(event) {
+
+      event.preventDefault(); // Prevent form submission
+
+      // Get the username and password
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (username === 'admin' && password === 'pass') {
+    // Redirect to the desired page
+        window.location.href = "index.html";
+  } else {
+    // Show an error message
+    alert("Invalid username or password. Please try again.");
+  }
+}
+
+function isUserRegistered(username) {
+      var users = JSON.parse(localStorage.getItem('users')) || [];
+      return users.some(function(user) {
+        return user.username === username;
+      });
+    }
+
+    // Register a new user
+    function registerUser(username, password) {
+      var users = JSON.parse(localStorage.getItem('users')) || [];
+      users.push({ username: username, password: password });
+      localStorage.setItem('users', JSON.stringify(users));
+      alert('Seems like u are visting 1st time here, Registration successful, Now you can log in !!')
+      document.getElementById('registrationMessage').innerText = "Registration successful. You can now log in.";
+    }
+
+    // Perform login
+    function login(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the username and password
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Check if the user is registered
+      if (isUserRegistered(username)) {
+        // Retrieve the stored users
+        var users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Find the user by username
+        var user = users.find(function(user) {
+          return user.username === username;
+        });
+
+        // Verify the password
+        if (user.password === password) {
+          // Redirect to the desired page
+          window.location.href = "index.html";
+        // redirectToPage("index.html");
+
+        } 
+    
+    else {
+          // Show an error message
+          alert("Invalid username or password. Please try again.");
+        }
+      } else {
+        // Register the user
+        registerUser(username, password);
+      }
+    }
+  </script>
+</body>
+</html> 
+
